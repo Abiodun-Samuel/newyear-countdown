@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Year Countdown</title>
+    <title>Countdown</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
       rel="stylesheet"
@@ -17,6 +17,17 @@
     <section id="particles-js"></section>
 
     <div class="container">
+      <div class="input">
+        <h3>Let the countdown begin.... Insert your date</h3>
+
+        <form id="date">
+          <input type="date" name="date" id="date_input" />
+          <button id="submit" type="submit">Begin</button>
+        </form>
+      </div>
+
+      <div id="error"></div>
+
       <div class="countdown-container">
         <div class="countdown-el days-c">
           <p class="big-text" id="days">0</p>
@@ -35,13 +46,18 @@
           <span>Seconds</span>
         </div>
       </div>
-      <div class="date">
-        <h5>1st Jan,</h5>
-        <h1>2021</h1>
+      <div class="current_date">
+        <h5>
+          <span id="present_date"></span> <span id="present_month"></span>,
+        </h5>
+        <h1 id="present_year"></h1>
       </div>
     </div>
 
-    <div class="footer">&copy 2020 <a href="">Abiodun Digital Hub</a></div>
+    <div class="footer">
+      &copy Copyright <span id="year"></span>
+      <a href="http://www.abiodunsamuel.com">Abiodun Digital Hub</a>
+    </div>
 
     <script src="particles.js"></script>
     <script src="app.js"></script>
